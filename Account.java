@@ -29,13 +29,13 @@ public class Account {
         return balance;
     }
 
-    // credit() method returns the amount deposited, or 0 if amount is negative
+    // credit() method returns the amount deposited after adding to balance
     public int credit(int amount) {
         balance += amount;
         return balance;
     }
 
-    // debit() method returns the amount withdrawn, or 0 if amount exceeded balance
+    // debit() method returns the amount withdrawn after subtracting from balance
     public int debit(int amount) {
         if (amount <= balance) {
             balance -= amount;
@@ -45,7 +45,7 @@ public class Account {
         return balance;
     }
 
-    // transferTo() method returns the amount transferred, or 0 if amount exceeded
+    // transferTo() method returns the amount transferred after subtracting from
     // balance
     public int transferTo(Account another, int amount) {
         if (amount <= balance) {
